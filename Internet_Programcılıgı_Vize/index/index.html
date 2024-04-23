@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sase Games Home Page Official Sase Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       body
+         {
+        font-family: 'Norwester', sans-serif;
+         margin: 0;
+         padding: 0;
+        background-color: #000000; /* Arka plan rengi */
+         }   
+
+        .container /*Hoşgeldiniz yazısın alt metni*/
+        {
+            width: 90%;
+            margin: 0 auto;
+            color: #ffffff;
+            text-align: center;
+        }
+
+    
+
+        header {
+            background-color: #ffffff; /* Arka plan rengi */
+            color: #ffffff;
+            padding: 10px 0; /* Padding'i azalt */
+            justify-content: space-between;
+            display: flex; justify-content: center; /* Uzaklaştırma ve yakınlaştırma yaparken içeriğğin bozzulmasını*/
+            align-items: center;
+            text-align: center; /* Logoyu ortala */
+        }
+
+        header h1 {
+            margin: 2;
+            font-size: 20px; /* Font boyutunu küçült */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 2%; /* link menüsünün default marginlerini kaldır */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+         color: rgb(252, 252, 252);
+        text-decoration: none;
+        transition: color 0.3s ease; /* Geçiş efekti */
+    }
+
+        nav ul li a:hover {
+         color: rgb(255, 0, 255); /* Daha soluk renk */
+    }   
+
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            color: rgb(220,20,60);
+        }
+
+        .oyun-listesi {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center; /* Oyun listesini ortala */
+        }
+
+        .oyun {
+            width: calc(50% - 10px);
+            background-color: rgb(241, 241, 241);
+            padding: 20px;
+            border-radius: 5px;
+            position: center;
+            text-align: center; /* İçeriği ortala */
+        }
+
+        .oyun img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: flex; 
+            justify-content: center;
+            margin: 0 auto; /* Resmi yatayda ortala */
+        }
+
+        .slider {
+    overflow: hidden;
+    width: 100%; /* Ekran genişliğine tam olarak sığacak şekilde ayarla */
+    max-width: 3840px; /* Slider'ın maksimum genişliği, ekran genişliğine göre ayarlanabilir */
+    height: 1080px; /* Slider'ın yüksekliği */
+    margin: auto;
+    text-align: center; /* İçeriği yatayda ortala */
+    position: center; /*  relative yap */
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: center; /* İçeriği yatayda ortala */
+    position: relative; /*  relative yap */
+    text-align: center; /* İçeriği ortala */
+}
+
+.slider {
+    min-width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative; /* Pozisyonu relative yap */
+                }
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block; /* Resmi blok haline getir, ortalamak için gerekli */
+    margin: 0 auto; /* Resmi yatayda ortala */
+                    }
+
+
+
+        footer {
+            background-color: rgb(220, 20, 60); /* Arka plan rengi */
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .oyun-listesi{
+            color: rgb(0, 0, 0);
+            position: center;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <header style="background-image: url('arkaplan.svg'); background-size: cover; background-position: center;">
+    <div class="container">
+        <img src="sasesvg.svg" alt="SASE GAMES" width="250">
+        <nav>
+            <ul>
+                <li><a href="#anasayfa">HOME</a></li>
+                <li><a href="#oyunlar">GAMES</a></li>
+                <li><a href="#hakkimizda">ABOUT US</a></li>
+                <li><a href="#iletisim">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="slider">
+        <div class="slider-content">
+            <a href="#" class="slide" onclick="nextSlide()">
+                <img src="slider.svg" alt="Slider Image 1">
+            </a>
+        </div>
+    </div>
+    
+
+    <script>
+        let currentIndex = 0; /* Java script kodları*/
+        const slides = document.querySelectorAll('.slide');
+
+        function nextSlide() {
+    slides[currentIndex].style.opacity = 0;
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].style.opacity = 1;
+}
+
+    </script>
+
+    <section id="anasayfa">
+        <div class="container">
+            <h2>Infinite Darkness: Trilogy</h2>
+            <p>Karanlık Sırlar: Gizemli bir şekilde ortadan kaybolan insanların izini sürerken, eski sırlarla dolu labirentlerde kaybolun. Her adımda yeni bir gizem sizi bekliyor.
+                Bilinmeyen Tehdit: Kötülüğün gölgesinde, cesur bir kahraman olmaya hazır mısınız? Zorlu bulmacaları çözün, karanlığın kalbine doğru ilerleyin ve dünyayı kurtaracak gücü bulun.
+                Son Karşılaşma: Büyük final yaklaşıyor! Kaderinizi belirleyecek kararları verin ve sonsuz karanlığın derinliklerindeki sırları açığa çıkarın. Her seçiminiz, yeni bir yolun kapısını açacak.
+                Hazır mısınız? Maceranın başlangıcı sizin seçiminizdir. "Infinite Darkness: Trilogy", sizi gerilim dolu bir yolculuğa davet ediyor. Gözlerinizi kapatın ve karanlığın içinde kaybolun.</p>
+        </div>
+    </section>
+
+    <section id="oyunlar">
+        <div class="container">
+            <h2>MACERAYA KATILIN!</h2>
+            <div class="oyun-listesi">
+                <div class="oyun">
+                    <img src="oyun1.jpg" alt="Oyun 1">
+                    <h3>Shadow Souls The Hunting</h3>
+                    <p>"Shadowed Souls: The Haunting", karanlık ve gizem dolu bir maceraya hazır olun! Bu oyun, cesur bir kahramanın, karanlık bir malikanenin derinliklerindeki sırları çözmek için verdiği mücadeleyi konu alıyor. Eski bir hayalet avcısı olarak, oyuncular, labirent gibi koridorlarda gezinirken karşılarına çıkan gizemli olayları araştıracak ve unutulmuş karanlık geçmişin perdesini aralayacaklar. Ancak dikkatli olun, zira her köşede tehlike ve ürpertici sürprizler sizi bekliyor olacak. Shadowed Souls: The Haunting, derinlemesine bir hikaye, atmosferik bir ortam ve sürükleyici oyun mekanikleriyle sizi korku dolu bir yolculuğa çıkaracak. Hazır mısınız, cesaretinizi test etmek için karanlıkta kaybolmaya?</p>
+                </div>
+                <div class="oyun">
+                    <img src="oyun2.jpg" alt="Oyun 2">
+                    <h3>Midnight Descent:Chronicles of Fear</h3>
+                    <p>"Midnight Descent: Chronicles of Fear", korku dolu bir hikayenin başlangıcı. Gece yarısında, karanlık bir şehirde, esrarengiz bir şekilde ortadan kaybolan insanlarla dolu bir dünyada, cesur bir kaşif olma şansınız var. Bu karanlık dünyada, gizemli bir güç her köşede saklanıyor ve gerilim dolu anlarla dolu bir yolculuk sizi bekliyor. Yapmanız gereken tek şey, karanlık geçmişin perdesini aralayarak bu ürkütücü sırları çözmek ve kaosun hakim olduğu bu dünyayı aydınlatmak. Ancak unutmayın, her adımınızda tehlike ve terör sizi bekliyor olacak. "Midnight Descent: Chronicles of Fear", unutulmaz bir korku deneyimi sunarken, oyuncuları karanlık ve gerilim dolu bir yolculuğa çıkarıyor. Cesaretiniz var mı, karanlıkta kaybolmaya ve korkunun derinliklerine inmeye hazır mısınız?</p>
+                </div>
+                <!-- Diğer oyunlar buraya eklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>SASE Games: Oyun Tutkusuyla Geleceği Şekillendirme
+
+                SASE Games, 2023 yılında oyun tutkunu bir grup geliştirici tarafından kurulmuştur. Kuruluşumuz, oyuncuların heyecanını ve merakını tatmin eden yaratıcı, yenilikçi ve eğlenceli oyunlar üretmek için bir araya gelmiştir.
+                
+                Amacımız, dünya çapında oyun endüstrisine katkıda bulunmak ve oyunculara unutulmaz deneyimler sunmaktır. Sahip olduğumuz tutku ve yeteneklerle, her bir projede özgün bir dokunuş ve benzersiz bir tarz yaratmayı hedefliyoruz.
+                
+                SASE Games olarak, sadece eğlenceye odaklanmıyoruz; aynı zamanda topluma ve çevreye de değer katmayı önemsiyoruz. Sosyal sorumluluk bilinciyle, projelerimizi etik ve sürdürülebilir bir şekilde yönetiyor, toplumsal fayda sağlayacak çalışmalara destek veriyoruz.
+                
+                Ekibimiz, çeşitli uzmanlık alanlarından gelen deneyimli ve tutkulu profesyonellerden oluşmaktadır. Oyun geliştirme sürecinin her aşamasında kaliteye ve yeniliğe odaklanarak, kullanıcıların beklentilerini aşacak ürünler sunmayı amaçlıyoruz.
+                
+                SASE Games olarak, gelecekteki projelerimizle oyun endüstrisinde adımızı daha da ileriye taşımak ve oyuncularla bağlarımızı güçlendirmek için sabırsızlanıyoruz. Bize katılın ve bizimle birlikte oyun dünyasının heyecan verici yolculuğuna katılın!
+                
+                </p>
+        </div>
+    </section>
+
+    <section id="iletisim">
+        <div class="container">
+            <h2>İletişim</h2>
+            <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz.</p>
+            <address>
+                SASE GAME STUDIO Creative Entertainment<br>
+                Adres: Yıldırım Beyazıt Mah. Aşık Veysel Blv Erciyes Teknopark 7. Bina, No: 63/58, 38030 Melikgazi/Kayseri<br>
+                Telefon: 0352 352 33 44<br>
+                E-posta: info@SASEGAMES.com
+            </address>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SASEGAMES. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>
